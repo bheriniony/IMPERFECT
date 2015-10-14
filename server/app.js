@@ -5,8 +5,26 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// New Code
+//var mongo = require('mongodb');
+//var monk = require('monk');
+//var db = monk('localhost:27017/IMPERFECT_ABONNES');
+/*var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/ImperfectApp', function(err) {
+    if(err) {
+        console.log('connection error', err);
+    } else {
+        console.log('connection successful');
+    }
+});*/
+
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
+/**
+ * Route Imports
+ */
+var signup = require('./routes/signup');
 
 var app = express();
 
@@ -20,6 +38,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// Make our db accessible to our router : peut ne pas marcher
 
 /**
  * Development Settings
@@ -60,5 +80,14 @@ if (app.get('env') === 'production') {
     });
 }
 
+/**
+ * Routes
+ */
+app.use('/signup', signup);
+
+// Error Handling
+app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+});
 
 module.exports = app;

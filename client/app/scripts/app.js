@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name clientApp
+ * @name ImperfectApp
  * @description
- * # clientApp
+ * # ImperfectApp
  *
  * Main module of the application.
  */
 angular
-  .module('clientApp', [
+  .module('ImperfectApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -30,6 +30,11 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/signup', {
+        templateUrl: 'views/signup.html',
+        controller: 'SignupCtrl',
+        controllerAs: 'signup'
       })
       .otherwise({
         redirectTo: '/'
