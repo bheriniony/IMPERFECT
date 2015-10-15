@@ -52,7 +52,6 @@ angular.module('ImperfectApp') // make sure this is set to whatever it is in you
 
 			// Make the request to the server ... which doesn't exist just yet
 			var request = $http.post('/signup', user);
-			
 
 			// we'll come back to here and fill in more when ready
 			request.success(function (data) {
@@ -60,12 +59,12 @@ angular.module('ImperfectApp') // make sure this is set to whatever it is in you
 				    // our json response is recognized as
 				    // the data parameter here. See? Our msg
 				    // value is right there!
-				    console.log(data.msg);
+				   console.log(data); 
 				});
 			});
 
 			request.error(function (data) {
-				console.log(data.msg);
+				console.log(data); 
 			});
 
 		};
