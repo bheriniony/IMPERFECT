@@ -3,10 +3,11 @@
  */
 var mongoose = require('mongoose');
 var UserModel = require('./schemas/users');
+var LookBookModel = require('./schemas/lookbooks');
 
 
 // Connections
-var developmentDb = 'mongodb://localhost/test';
+var developmentDb = 'mongodb://localhost/ImperfectBDD';
 var productionDb = 'urlToYourProductionMongoDb';
 var usedDb;
 
@@ -38,3 +39,4 @@ db.once('open', function callback () {
 });
 
 exports.users = UserModel;
+exports.lookbooks = LookBookModel;

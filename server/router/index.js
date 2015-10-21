@@ -14,6 +14,8 @@ module.exports = router;*/
  */
 
  module.exports = function (app) {
-	     // The signup route
+	  // The signup route
      app.use('/signup', require('./routes/signup'));
+     // La liste des lookBook
+     app.use('/loadBook', require('./routes/loadBook'));
  }

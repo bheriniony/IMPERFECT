@@ -41,7 +41,8 @@ $body-bg:               #fbfbff !default;
 $text-color:            $brand-dark !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+// $link-color:            $brand-primary !default;
+$link-color:            #A9233A !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
@@ -378,14 +379,15 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             #777 !default;
-$navbar-default-bg:                #f8f8f8 !default;
+$navbar-default-color:             #000 !default;
+/*$navbar-default-bg:                #f8f8f8 !default;*/
+$navbar-default-bg:                #FDF4F8 !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
 $navbar-default-link-color:                #777 !default;
 $navbar-default-link-hover-color:          #333 !default;
-$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-hover-bg:             #F8D8E6 !default;
 $navbar-default-link-active-color:         #555 !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
@@ -716,7 +718,7 @@ $list-group-link-heading-color: #333 !default;
 //
 //##
 
-$panel-bg:                    #fff !default;
+$panel-bg:                    #FDF4F8 !default;
 $panel-body-padding:          15px !default;
 $panel-heading-padding:       10px 15px !default;
 $panel-footer-padding:        $panel-heading-padding !default;
@@ -724,7 +726,7 @@ $panel-border-radius:         $border-radius-base !default;
 
 //** Border color for elements within panels
 $panel-inner-border:          #ddd !default;
-$panel-footer-bg:             #f5f5f5 !default;
+$panel-footer-bg:             #FDF4F8 !default;
 
 $panel-default-text:          $gray-dark !default;
 $panel-default-border:        #ddd !default;

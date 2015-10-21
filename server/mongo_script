@@ -1,0 +1,40 @@
+db.lookbooks.insert(
+   [
+     {
+        "titre" : "Girly romantic",
+        "description" : "Choississez de remettre une de vos combi-shorts d'été avec des bottes longues et une grosse écharpe.",
+        "image" : "images\/LookBook\/chapeau_combishort.jpg",
+        "astuce" : "le chapeau façon capeline pour ajouter une touche de romantisme à votre look"
+	},
+	{
+	        "titre" : "Classe en Jean",
+	        "description" : "La chemise en jean, indémodable, à porter avec un slim, talons classiques noir et un beau manteau beige.",
+	        "image" : "images\/LookBook\/chemise_jean.jpg",
+	        "astuce" : "un petit foulard autour du cou et un Ipurse pour le côté classe"
+	},
+	{
+	        "titre" : "Echarpe oversize",
+	        "description" : "La grande nouveauté de cette hiver : l'écharpe oversize. La porter avec un jean slim bleue et une veste",
+	        "image" : "images\/LookBook\/echarpe.jpg",
+	        "astuce" : "choissisez une couleur vive et qui se marie bien avec votre veste"
+	},
+	{
+	        "titre" : "Maxi Pull",
+	        "description" : "Portez votre maxi pull avec un petit slim en cuir et une chemise en jean ovesrize.",
+	        "image" : "images\/LookBook\/jeanMaxiPull.jpg",
+	        "astuce" : "Retroussez la manche de votre chemise au dessus du pull pour un look masculin/féminin réussi."
+	},
+	{
+	        "titre" : "Classe en mini",
+	        "description" : "Même en hiver, vous pouvez toujours sortir vos mini-jupes, portées avec un collant opaque noir et un sweat",
+	        "image" : "images\/LookBook\/mini_jupe.jpg",
+	        "astuce" : "Portez un manteau plus long que votre jupe. Et de préférence, choississez la couleur pastel."
+	},
+	{
+	        "titre" : "Motif carreau",
+	        "description" : "Le carreau revient ce hiver, il se porte bien en gilet avec tout",
+	        "image" : "images\/LookBook\/motif_carreau.jpg",
+	        "astuce" : "Ca rajoute une touche classe si vous le portez avec des boots et des gants en cuir."
+	  },
+   ]
+)
