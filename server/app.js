@@ -5,19 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-// New Code
-//var mongo = require('mongodb');
-//var monk = require('monk');
-//var db = monk('localhost:27017/IMPERFECT_ABONNES');
-/*var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/ImperfectApp', function(err) {
-    if(err) {
-        console.log('connection error', err);
-    } else {
-        console.log('connection successful');
-    }
-});*/
-
 
 /*var routes = require('./router/index');
 var users = require('./router/routes/users');*/

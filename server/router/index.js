@@ -18,4 +18,6 @@ module.exports = router;*/
      app.use('/signup', require('./routes/signup'));
      // La liste des lookBook
      app.use('/loadBook', require('./routes/loadBook'));
+     // La liste des lookBook
+     app.use('/showAlook', require('./routes/showAlook'));
  }

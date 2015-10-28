@@ -36,6 +36,11 @@ angular
         controller: 'SignupCtrl',
         controllerAs: 'signup'
       })
+      .when('/:id', {
+        templateUrl: 'views/lookbookdetail.html',
+        controller: 'LookbookdetailCtrl',
+        controllerAs: 'lookBookDetail'
+      })
       .otherwise({
         redirectTo: '/'
       });

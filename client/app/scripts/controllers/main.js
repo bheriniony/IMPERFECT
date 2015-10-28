@@ -20,5 +20,9 @@ angular.module('ImperfectApp')
   	 .error(function(data, status){
            console.log('error'+ status);
             $scope.LookBooks = [];
-        });  
+        });
+  
+
   }]);
+
+

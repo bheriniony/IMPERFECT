@@ -2,9 +2,9 @@
     <h1>Get inspired!</h1>
     <div class="row">  
       <div class="col-md-4" ng-repeat="LookBook in LookBooks">
-        <a href="{{LookBook.image}}" class="thumbnail">
+        <a href="#/{{LookBook._id}}" class="thumbnail">
           <img src="{{LookBook.image}}" />
-          <br/>
+          <br/>          
            <span class="titre_look">{{LookBook.titre}}</span>
         </a>
       </div>

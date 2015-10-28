@@ -10,7 +10,7 @@ var db = require('../../database');
 var Lookbooks = db.lookbooks;
 var users = db.users;
 
-// Setup the Route
+// Setup the Route for the find All
 router.get('/', function (req, res, next) {
 
     // show the request body in the command line
@@ -34,7 +34,6 @@ router.get('/', function (req, res, next) {
 		    }
   	});
 });
-
 
 
 // Expose the module
