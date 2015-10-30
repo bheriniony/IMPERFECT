@@ -1,12 +1,81 @@
-<div class="jumbotron" ng-controller="MainCtrl as main">
-    <h1>Get inspired!</h1>
+<div class="jumbotron" ng-controller="MainCtrl as main">   
     <div class="row">  
-      <div class="col-md-4" ng-repeat="LookBook in LookBooks">
-        <a href="#/{{LookBook._id}}" class="thumbnail">
-          <img src="{{LookBook.image}}" />
+      <div class="col-md-6" ng-repeat="Article in Articles">       
+        <!-- Image cliquable pour ouvrir la fenêtre modale-->
+         <img src="{{Article.imageRef}}" class="img-thumbnail" data-toggle="modal" data-target="#myModaltest{{Article.reference}}" data-local="#myCarousel"/>
+        <br/>          
+         <span class="titre_look">{{Article.nom}}</span>
           <br/>          
-           <span class="titre_look">{{LookBook.titre}}</span>
-        </a>
+          <span class="titre_look">{{Article.prix}} AR</span>
+
+          <!-- Fenêtre modale-->
+          <div id="myModaltest{{Article.reference}}" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">{{Article.nom}}</h4>
+                  </div>
+                  <div class="modal-body">
+                    <!-- Galerie des photos existantes de l'article-->
+                    <div id="myCarousel{{Article.reference}}" class="carousel slide carousel_imp" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#myCarousel{{Article.reference}}" data-slide-to="0" class="active"></li>
+                          <li data-target="#myCarousel{{Article.reference}}" data-slide-to="1"></li>
+                          <li data-target="#myCarousel{{Article.reference}}" data-slide-to="2"></li>
+                        </ol>
+
+                        <div class="carousel-inner" role="listbox">
+                          <div class="item active">
+                              <img src="{{Article.imageRef}}" alt="{{Article.reference}}">
+                              <div class="carousel-caption">                                
+                              </div>
+                            </div>  
+
+                           <div ng-repeat="photo in Article.photos" class="item">
+                              <img src="{{photo}}" alt="{{Article.reference}}">
+                              <div class="carousel-caption">
+                              </div>
+                            </div>                          
+                        </div>
+
+                        
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" data-target="#myCarousel{{Article.reference}}" role="button" data-slide="prev">
+                          <span class="fa fa-chevron-left middle" aria-hidden="true"></span>
+                          <span class="sr-only">Précedent</span>
+                        </a>
+                        <a class="right carousel-control" data-target="#myCarousel{{Article.reference}}" role="button" data-slide="next">
+                          <span class="fa fa-chevron-right middle" aria-hidden="true"></span>
+                          <span class="sr-only">Suivant</span>
+                        </a> 
+                    </div>
+
+                    <div class="detail_Article">
+                        Disponible en {{Article.couleurs.length}} couleurs : 
+                        <div ng-repeat="couleur in Article.couleurs">
+                          {{couleur}}
+                        </div>
+                        <br/>
+                        Taille : <span ng-repeat="taille in Article.tailles">{{taille}} </span>
+                        <br/>
+                        <div>Composition : {{Article.composition}}</div>
+                    </div>
+                    <div style="clear:both;"></div>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        
       </div>
   </div>
 </div>

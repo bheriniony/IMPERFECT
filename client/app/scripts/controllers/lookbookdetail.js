@@ -8,19 +8,19 @@
  * Controller of the clientApp
  */
 angular.module('ImperfectApp')
-  .factory('LookBook', ['$http','$routeParams', function($http, $routeParams){
-          console.log("id in the controller "+$routeParams.id);
-            var request = $http.get('/showAlook/'+$routeParams.id);
-            return request;
-        }])
-.controller('LookbookdetailCtrl', ['$scope', '$routeParams','LookBook', function ($scope, $routeParams, LookBook) {
+.controller('LookbookdetailCtrl', ['$scope', '$routeParams','$http', function ($scope, $routeParams, $http) {
       
-  	 LookBook.success(function(data){
+    var look;
+    
+    $scope.look = look = [];  
+    var request = $http.get('/showAlook/'+$routeParams.id);
+
+  	 request.success(function(data){
   	 		console.log('success detail'+ data);
-            $scope.LookBook = data;
+            $scope.look = data;
           })
   	 .error(function(data, status){
            console.log('error detail'+ data);
-           $scope.LookBook = [];
+           $scope.look = [];
         });  
   }]);

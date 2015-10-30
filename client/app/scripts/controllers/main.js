@@ -8,18 +8,19 @@
  * Controller of the ImperfectApp
  */
 angular.module('ImperfectApp')
-	.factory('LookBooks', ['$http', function($http){
-          return $http.get('/loadBook');
+	.factory('Articles', ['$http', function($http){
+          return $http.get('/getListArticles');
         }])
-  .controller('MainCtrl', ['$scope', 'LookBooks', function ($scope, LookBooks) {
+  .controller('MainCtrl', ['$scope', 'Articles', function ($scope, Articles) {
 
-  	 LookBooks.success(function(data){
+  	 Articles.success(function(data){
   	 		console.log('success'+ status);
-            $scope.LookBooks = data;
+            $scope.Articles = data;
+            //$scope.photos = Articles.photos[];
           })
   	 .error(function(data, status){
            console.log('error'+ status);
-            $scope.LookBooks = [];
+            $scope.Articles = [];
         });
   
 

@@ -16,6 +16,8 @@ module.exports = router;*/
  module.exports = function (app) {
 	  // The signup route
      app.use('/signup', require('./routes/signup'));
+     // La liste des articles
+     app.use('/getListArticles', require('./routes/getListArticles'));
      // La liste des lookBook
      app.use('/loadBook', require('./routes/loadBook'));
      // La liste des lookBook

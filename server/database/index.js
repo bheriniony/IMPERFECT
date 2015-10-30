@@ -4,6 +4,7 @@
 var mongoose = require('mongoose');
 var UserModel = require('./schemas/users');
 var LookBookModel = require('./schemas/lookbooks');
+var ArticleModel = require('./schemas/articles');
 
 
 // Connections
@@ -40,3 +41,4 @@ db.once('open', function callback () {
 
 exports.users = UserModel;
 exports.lookbooks = LookBookModel;
+exports.articles = ArticleModel;

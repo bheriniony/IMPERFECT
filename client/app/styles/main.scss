@@ -72,12 +72,30 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+  
+/**************PERSONAL CSS**********************/
   .container {
     max-width: 800px;
   }
    .navbar-header{
    width:100%;
    }
+
+.middle{
+       top: 50%;
+    position: absolute;
+    }
+.carousel_imp{
+    float : left;
+    width :50%; 
+    height:50%
+    }
+
+.detail_Article{
+  /*padding-left:10px;
+  text-align:left;*/
+}
+/**************PERSONAL CSS**********************/
 
   /* Remove the padding we set earlier */
   .header,
