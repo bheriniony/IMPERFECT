@@ -61,5 +61,35 @@ Qu'est ce qui se passe quand on modifie sur l'applicatif
 Use ArgoCD , vit dans le cluster tech
 Argo cd permet de faire la synchro entre les.modfs en direct et notre infra as code 
 
+ ## Pipelines
+
+Convention message de commit
+Strategies de fusions/ création de branche Usage/ nommage des branches : workflow
+Stratégie de tagging : garder les.mm nomenclature
+Stratégie de build plus simple avec un projet monolithiques
+Conventionnal comments sur les reviews pour éviter les malentendus
+Build maintrise, isolé et lancable.en local
+Optimiser en parralelisant des jobs, faire la chasse aux tâches en attente
+Déterminer les.system under test
+Se réserver un temps pour de l'amélioration stack 
+Tests d'Api : resto assurés, karaté, en. Ligne( swagger, apigee...)
+Data fuzzing : équivalent au monkey test ( très compliqué à écrire)
+
+##safeguarding Kafka
+
+Topic name :mess
+Ack : loose data
+Linger.ms : bien configurer
+Compression.codec : waste of storage and network
+Consumer group names : 
+Latency : 
+Fetch.min.bytes : 
+
+Solution aux pb: ajouter des protocoles Kafka 
+Kafka apache.irg/ protocol : 
+Ajouter gateway à Kafka : encryption, safgaurd
+Conduktor-gateway
+
+
 
 
